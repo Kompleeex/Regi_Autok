@@ -1,0 +1,147 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+}
+
+main{
+    margin:auto;
+    display: grid;
+    max-width: 1000px;
+    /*border: 1px solid black;*/
+    grid-template-areas:"h h h h"
+                        "n n n n"
+                        "ar ar ar as"
+                        "f f f f";
+                        grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+header{
+    grid-area: h;
+}
+
+header h1{
+    color: green;
+}
+
+nav{
+    grid-area: n;
+    background-color: green;
+}
+
+nav ul{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+nav ul li{
+    list-style-type: none;
+}
+
+nav ul li a:hover{
+    background-color: darkgreen;
+}
+
+nav ul li a{
+    color: black;
+    text-decoration: none;
+} 
+
+article{
+    grid-area: ar;
+    text-align: justify;
+    padding: 5px;
+}
+
+article img{
+    width: 100%;
+}
+
+article ol li{
+    padding-bottom: 20px;
+}
+
+.emberek{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    border: 1px solid black;
+}
+
+.Karl_Benz{
+    padding: 20px;
+    
+}
+
+.Karl_Benz h1{
+    text-align: center;
+    border: 1px solid black;
+}
+
+.Henry_Ford{
+    padding: 20px;
+    
+}
+
+.Henry_Ford h1 {
+    text-align: center;
+    border: 1px solid black;
+}
+
+
+aside img{
+    width: 100%;
+    border:1px solid black;
+    padding: 5px;
+    
+}
+
+aside{
+    grid-area: as;
+    margin: 5px;
+}
+
+footer{
+    text-align: center;
+    grid-area: f;
+    /*border: 1px solid black;*/
+}
+
+table{
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table tr th{
+    border-bottom:1px solid rgb(0, 0, 0) ;
+}
+
+table tr td{
+    border-bottom:1px solid darkgrey ;
+}
+
+table tr:nth-child(even) {
+    background-color: deepskyblue;
+}
+
+
+    
+@media only screen and (max-width: 768px) {
+
+    nav ul{
+        grid-template-columns: 1fr;
+    }
+
+    main{
+        grid-template-areas:"h"
+                            "n"
+                            "ar"
+                            "as"
+                            "f";
+                            grid-template-columns: 1fr;
+    }
+
+    .emberek{
+        grid-template-columns: 1fr;
+    }
+}
